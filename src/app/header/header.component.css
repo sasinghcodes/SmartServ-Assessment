@@ -1,0 +1,9 @@
+.header-title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: white !important;
+}
+.header-container {
+  background-color: #60BBF3 !important;
+}

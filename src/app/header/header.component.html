@@ -1,0 +1,7 @@
+<nav class="navbar navbar-light bg-light header-container">
+  <a class="navbar-brand header-title">Tech Store</a>
+  <form class="form-inline" #searchProduct = "ngForm" (ngSubmit) = "onProductSearch(searchProduct.value)" [ngStyle]="{'width': '500px'}">
+    <input class="form-control mr-sm-2"  ngModel type="text" [ngStyle]="{'width': '75%'}" name="searchText" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-warning my-2 my-sm-0" value="submit" type="submit">Search</button>
+  </form>
+</nav>

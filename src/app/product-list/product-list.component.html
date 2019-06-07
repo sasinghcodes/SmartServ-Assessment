@@ -1,0 +1,28 @@
+<div class="content-body">
+  <div class="d-flex justify-content-end">
+      <div class="input-group mb-3" [ngStyle]="{'width': '22%'}">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Sort</label>
+          </div>
+          <select class="custom-select" (change)="sortProductLayout($event.target.value, productArray)" id="inputGroupSelect01">
+            <option value="1" selected>Relevance</option>
+            <option value="2">Popularity</option>
+            <option value="3">Price: Low to High</option>
+            <option value="4">Price: High to Low</option>
+          </select>
+        </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let item of productArray | paginate: { itemsPerPage: 8, currentPage: p }">
+      <div class="card mb-3">
+        <img [src]="getRandomImages(image)" #image class="card-img-top img-align" alt="Image Preview Broke..">
+        <div class="card-body">
+          <h6 class="card-title" data-toggle="tooltip" data-placement="bottom" [title]="item.title">{{ getProductName(item.title) }}</h6>
+          <p class="card-text card-price text-muted">Price: &#8377;{{item.price}}</p>
+          <button type="button" class="btn btn-outline-warning">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

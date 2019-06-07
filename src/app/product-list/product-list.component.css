@@ -1,0 +1,14 @@
+.content-body {
+  padding: 2%;
+}
+.img-align {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+  min-height: 236px;
+}
+.card-price {
+  font-weight: 500;
+  font-size: 18px;
+}
+
